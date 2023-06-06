@@ -3,6 +3,7 @@
 	"runtime": "org.freedesktop.Platform",
 	"runtime-version": "22.08",
 	"sdk": "org.freedesktop.Sdk",
+	"command": "freerct",
 	"finish-args": [
 		"--device=dri",
 		"--share=ipc",
@@ -12,7 +13,7 @@
 	"modules": [
 		{
 			"name": "freerct",
-			"buildsystem": "cmake",
+			"buildsystem": "cmake-ninja",
 			"config-opts": [
 				"-DFREERCT_BASENAME=net.freerct.FreeRCT",
 				"-DRELEASE=ON"
