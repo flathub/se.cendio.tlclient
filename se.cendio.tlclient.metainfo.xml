@@ -49,23 +49,23 @@
 			<caption>Linux remote desktop client — Access Linux desktops and applications from any device</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-intro.png</image>
 		</screenshot>
-		<screenshot type="default">
+		<screenshot>
 			<caption>Easy file access — Work with local files on the remote desktop</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-local-drives.png</image>
 		</screenshot>
-		<screenshot type="default">
+		<screenshot>
 			<caption>Access your Linux desktop in fullscreen — For a seamless desktop experience</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-fullscreen-mode.png</image>
 		</screenshot>
-		<screenshot type="default">
+		<screenshot>
 			<caption>Customize your experience — Set up choices of different desktops or applications</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-profile-chooser.png</image>
 		</screenshot>
-		<screenshot type="default">
+		<screenshot>
 			<caption>Login in your ThinLinc server — Authenticate with for example OTP, Kerberos or a regular password</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-login-window.png</image>
 		</screenshot>
-		<screenshot type="default">
+		<screenshot>
 			<caption>Graphics acceleration for demanding tasks — Server-side GPU acceleration via VirtualGL</caption>
 			<image type="source" width="2560" height="1440">https://www.cendio.com/resources/images/screenshots/thinlinc/linux-en-graphics-acceleration.png</image>
 		</screenshot>
