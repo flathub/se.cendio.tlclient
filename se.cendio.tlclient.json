@@ -119,8 +119,8 @@
 					"sha256": "81b8e54abe184bda88a04dd827d03e85da528bf93f7f457e838c3c4f97616274",
 					"x-checker-data": {
 						"type": "html",
-						"url": "https://www.cendio.com/thinlinc/download",
-						"version-pattern": "<a href=\"/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-x86_64.tar.gz\">64-bit</a>",
+						"url": "https://www.cendio.com/thinlinc/download/",
+						"version-pattern": "<a href=\"https://www.cendio.com/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-x86_64.tar.gz\" download class=\"linux-tar-64bit\">",
 						"url-template": "https://www.cendio.com/downloads/clients/tl-${version}-client-linux-dynamic-x86_64.tar.gz"
 					}
 				},
