@@ -25,6 +25,7 @@
 			"config-opts": [
 				"--disable-libudev",
 				"--disable-libsystemd",
+				"--disable-polkit",
 				"--without-systemdsystemunitdir"
 			],
 			"sources": [
