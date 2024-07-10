@@ -116,8 +116,8 @@
 					"only-arches": [
 						"x86_64"
 					],
-					"url": "https://www.cendio.com/downloads/clients/tl-4.16.0-3389-client-linux-dynamic-x86_64.tar.gz",
-					"sha256": "ea3a92186cbaf71cc4ab692b3baeadd94b3836242e58705a38fe3683f4f18691",
+					"url": "https://www.cendio.com/downloads/clients/tl-4.17.0-3543-client-linux-dynamic-x86_64.tar.gz",
+					"sha256": "ee997def118d170483a5632906f933fdb7ccb16aae56c255181f9f79626f4506",
 					"x-checker-data": {
 						"type": "html",
 						"url": "https://www.cendio.com/thinlinc/download/",
