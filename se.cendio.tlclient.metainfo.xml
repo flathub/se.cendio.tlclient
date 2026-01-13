@@ -9,6 +9,7 @@
 	<project_license>LicenseRef-proprietary=https://www.cendio.com/thinlinc/docs/legal/eula</project_license>
 	<url type="homepage">https://www.cendio.com</url>
 	<description>
+		<p>**NOTE: This package is not verified by, affiliated with, or supported by Cendio AB.**</p>		
 		<p>
 			The ThinLinc Client is a remote desktop client used to connect to a ThinLinc
 			Server. With ThinLinc you are able to get access to Linux desktops and
@@ -38,10 +39,6 @@
 			load-balancer, administration interface, etc.) and end-user
 			components (client software, customization tools, etc.) to provide a
 			complete solution.
-		</p>
-		<p>
-			NOTE: This package is not verified by, affiliated with, or supported
-			by Cendio AB.
 		</p>
 	</description>
 	<screenshots>
