@@ -19,7 +19,6 @@
 		"--socket=x11"
 	],
 	"modules": [
-		"shared-modules/libusb/libusb.json",
 		{
 			"name": "pcsc-lite",
 			"config-opts": [
