@@ -101,7 +101,8 @@
 			"build-commands": [
 				"tar -xf thinlinc.tar.gz",
 				"mv tl-*-client-linux-dynamic-$(uname -m)/bin/* ${FLATPAK_DEST}/bin",
-				"mv tl-*-client-linux-dynamic-$(uname -m)/* ${FLATPAK_DEST}/lib",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/etc/* ${FLATPAK_DEST}/etc",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/lib/* ${FLATPAK_DEST}/lib",
 				"mv ${FLATPAK_DEST}/lib/tlclient/share/* ${FLATPAK_DEST}/share",
 				"mv ${FLATPAK_DEST}/share/applications/thinlinc-client.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
 				"mv ${FLATPAK_DEST}/share/mime/packages/thinlinc-client-mime.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
