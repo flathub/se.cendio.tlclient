@@ -96,8 +96,8 @@
 			"buildsystem": "simple",
 			"build-commands": [
 				"tar -xf thinlinc.tar.gz",
-				"mv tl-*-client-linux-dynamic-x86_64/bin/* ${FLATPAK_DEST}/bin",
-				"mv tl-*-client-linux-dynamic-x86_64/lib/* ${FLATPAK_DEST}/lib",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/bin/* ${FLATPAK_DEST}/bin",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/* ${FLATPAK_DEST}/lib",
 				"mv ${FLATPAK_DEST}/lib/tlclient/share/* ${FLATPAK_DEST}/share",
 				"mv ${FLATPAK_DEST}/share/applications/thinlinc-client.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
 				"mv ${FLATPAK_DEST}/share/mime/packages/thinlinc-client-mime.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
@@ -122,6 +122,21 @@
 						"url": "https://www.cendio.com/thinlinc/download/",
 						"version-pattern": "<a href=\"https://www.cendio.com/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-x86_64.tar.gz\" download class=\"linux-tar-64bit\" target=\"_blank\">",
 						"url-template": "https://www.cendio.com/downloads/clients/tl-${version}-client-linux-dynamic-x86_64.tar.gz"
+					}
+				},
+				{
+					"type": "file",
+					"dest-filename": "thinlinc.tar.gz",
+					"only-arches": [
+						"aarch64"
+					],
+					"url": "https://www.cendio.com/downloads/clients/tl-4.21.0-4588-client-linux-dynamic-aarch64.tar.gz",
+					"sha256": "08d70ea88915127b07dd362ccdf4131bfd2f4c4c948ab88b4968ed661afff819",
+					"x-checker-data": {
+						"type": "html",
+						"url": "https://www.cendio.com/thinlinc/download/",
+						"version-pattern": "<a href=\"https://www.cendio.com/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-aarch64.tar.gz\" download class=\"linux-tar-armv7\" target=\"_blank\">",
+						"url-template": "https://www.cendio.com/downloads/clients/tl-${version}-client-linux-dynamic-aarch64.tar.gz"
 					}
 				},
 				{
