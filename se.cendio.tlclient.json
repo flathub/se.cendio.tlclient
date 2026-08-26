@@ -21,23 +21,27 @@
 	"modules": [
 		{
 			"name": "pcsc-lite",
+			"buildsystem": "meson",
 			"config-opts": [
-				"--disable-libudev",
-				"--disable-libsystemd",
-				"--disable-polkit",
-				"--without-systemdsystemunitdir"
+				"-Dlibudev=false",
+				"-Dlibsystemd=false",
+				"-Dpolkit=false"
+			],
+			"post-install": [
+				"rm /app/sbin/pcscd",
+				"rmdir /app/sbin || true"
 			],
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://pcsclite.apdu.fr/files/pcsc-lite-2.1.0.tar.bz2",
-					"sha256": "85cab61cc744c81e2bc432656863293b8428d0136f079e3b12a84b335b5b35aa",
-					"x-checker-data": {
-						"type": "anitya",
-						"project-id": 2611,
-						"url-template": "https://pcsclite.apdu.fr/files/pcsc-lite-$version.tar.bz2"
-					}
+					"url": "https://salsa.debian.org/rousseau/PCSC/-/archive/2.4.1/PCSC-2.4.1.tar.bz2",
+					"sha256": "b10104a92b9c066a2d02cc2d8b539cb3a9f720d217799233dbe1dc1234b0aeaa"
 				}
+			],
+			"cleanup": [
+				"/sysusers.d",
+				"/lib/systemd",
+				"/etc/default/pcscd"
 			]
 		},
 		{
@@ -96,8 +100,9 @@
 			"buildsystem": "simple",
 			"build-commands": [
 				"tar -xf thinlinc.tar.gz",
-				"mv tl-*-client-linux-dynamic-x86_64/bin/* ${FLATPAK_DEST}/bin",
-				"mv tl-*-client-linux-dynamic-x86_64/lib/* ${FLATPAK_DEST}/lib",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/bin/* ${FLATPAK_DEST}/bin",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/etc/* ${FLATPAK_DEST}/etc",
+				"mv tl-*-client-linux-dynamic-$(uname -m)/lib/* ${FLATPAK_DEST}/lib",
 				"mv ${FLATPAK_DEST}/lib/tlclient/share/* ${FLATPAK_DEST}/share",
 				"mv ${FLATPAK_DEST}/share/applications/thinlinc-client.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop",
 				"mv ${FLATPAK_DEST}/share/mime/packages/thinlinc-client-mime.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
@@ -122,6 +127,21 @@
 						"url": "https://www.cendio.com/thinlinc/download/",
 						"version-pattern": "<a href=\"https://www.cendio.com/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-x86_64.tar.gz\" download class=\"linux-tar-64bit\" target=\"_blank\">",
 						"url-template": "https://www.cendio.com/downloads/clients/tl-${version}-client-linux-dynamic-x86_64.tar.gz"
+					}
+				},
+				{
+					"type": "file",
+					"dest-filename": "thinlinc.tar.gz",
+					"only-arches": [
+						"aarch64"
+					],
+					"url": "https://www.cendio.com/downloads/clients/tl-4.21.0-4588-client-linux-dynamic-aarch64.tar.gz",
+					"sha256": "08d70ea88915127b07dd362ccdf4131bfd2f4c4c948ab88b4968ed661afff819",
+					"x-checker-data": {
+						"type": "html",
+						"url": "https://www.cendio.com/thinlinc/download/",
+						"version-pattern": "<a href=\"https://www.cendio.com/downloads/clients/tl-([\\d\\.-]*)-client-linux-dynamic-aarch64.tar.gz\" download class=\"linux-tar-armv7\" target=\"_blank\">",
+						"url-template": "https://www.cendio.com/downloads/clients/tl-${version}-client-linux-dynamic-aarch64.tar.gz"
 					}
 				},
 				{
